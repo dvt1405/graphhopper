@@ -1,8 +1,11 @@
 name: Remove old artifacts
 on:
-  schedule:
-    - cron: '0 3 1 * *' # Every 1st of the month at 3am
   workflow_dispatch:
+# Manual only since 2026-11-12 (GitHub token incident). Triggers before:
+# on:
+#   schedule:
+#     - cron: '0 3 1 * *' # Every 1st of the month at 3am
+#   workflow_dispatch:
 jobs:
   remove-old-artifacts:
     name: Remove old artifacts
